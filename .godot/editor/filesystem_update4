@@ -1,0 +1,6 @@
+res://default_env.tres
+res://Scenes/Menu.tscn
+res://Scenes/Global.tscn
+res://Scripts/Conductor.gd
+res://Scripts/Global.gd
+res://Scripts/Game.gd
