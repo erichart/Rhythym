@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://kjg8jox7r3rr"]
+[gd_scene load_steps=9 format=3 uid="uid://kjg8jox7r3rr"]
 
 [ext_resource type="Script" path="res://Scripts/FirstVillain.gd" id="1_8b3af"]
 [ext_resource type="Texture2D" uid="uid://qx5aoldkw70o" path="res://Sprites/game/bucky/knight.png" id="1_k5maf"]
@@ -6,6 +6,10 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrcwq"]
 atlas = ExtResource("1_k5maf")
 region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvxuw"]
+atlas = ExtResource("1_k5maf")
+region = Rect2(96, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fqqe0"]
 atlas = ExtResource("1_k5maf")
@@ -27,6 +31,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvxuw")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -61,5 +73,5 @@ script = ExtResource("1_8b3af")
 position = Vector2(-24, -24)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_7wbf6")
-animation = &"up"
-autoplay = "up"
+animation = &"idle"
+autoplay = "idle"

@@ -1,14 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn1qxupb7kmkc"]
+[gd_scene load_steps=10 format=3 uid="uid://cn1qxupb7kmkc"]
 
-[ext_resource type="PackedScene" path="res://Scenes/ArrowButton.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b8fjq5l2uvye0" path="res://Scenes/ArrowButton.tscn" id="1"]
 [ext_resource type="SpriteFrames" path="res://Frames/arrow_left_frames.tres" id="2"]
 [ext_resource type="SpriteFrames" path="res://Frames/arrow_right_frames.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://br8w8bdlqdm2i" path="res://Sprites/game/road/road.png" id="4"]
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_up_frames.tres" id="4_ccos4"]
 [ext_resource type="AudioStream" uid="uid://h142tr42r62r" path="res://Sounds/song.ogg" id="5"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="7"]
-[ext_resource type="PackedScene" path="res://Scenes/Conductor.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://3qu1a4ccv743" path="res://Scenes/Conductor.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://kjg8jox7r3rr" path="res://Scenes/first_villain.tscn" id="10_hervh"]
 
 [node name="Game" type="Node2D"]
@@ -21,7 +20,6 @@ centered = false
 
 [node name="ArrowUp" parent="." instance=ExtResource("1")]
 position = Vector2(160, 164)
-sprite_frames = ExtResource("4_ccos4")
 input = "up"
 
 [node name="ArrowLeft" parent="." instance=ExtResource("1")]
@@ -51,6 +49,12 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("7")
 horizontal_alignment = 1
+
+[node name="Debug" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 75.0
+offset_right = 98.0
+offset_bottom = 98.0
 
 [node name="Conductor" parent="." instance=ExtResource("8")]
 stream = ExtResource("5")

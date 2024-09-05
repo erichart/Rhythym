@@ -125,6 +125,8 @@ func _spawn_notes(to_spawn):
 		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
+		$Debug.text = str(lane)
+		draw_attacks(lane)
 	if to_spawn > 1:
 		while rand == lane:
 			rand = randi() % 3
@@ -132,6 +134,9 @@ func _spawn_notes(to_spawn):
 		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
+		$Debug.text = str(lane)
+		draw_attacks(lane)
+		
 		
 
 
@@ -164,3 +169,11 @@ func increment_score(by):
 func reset_combo():
 	combo = 0
 	$Combo.text = ""
+	
+func draw_attacks(direction):
+	if direction == 0:
+		$FirstVillain.display_attack_left()
+	elif direction == 1:
+		$FirstVillain.display_attack_up()
+	elif direction == 2:
+		$FirstVillain.display_attack_right()

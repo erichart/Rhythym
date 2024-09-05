@@ -11,3 +11,13 @@ func _ready() -> void:
 func _process(delta):
 	if Input.is_action_just_pressed("React"):
 		animatedSprite.play("right")
+# todo make animation move based on arrow keys
+
+func display_attack_left():
+	animatedSprite.play("left")
+
+func display_attack_up():
+	animatedSprite.play("up")
+	
+func display_attack_right():
+	animatedSprite.play("right")

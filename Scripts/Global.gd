@@ -8,6 +8,7 @@ var good = 0
 var okay = 0
 var missed = 0
 var grade = "NA"
+var arrow_position = "none"
 
 signal beat(position)
 signal measure(position)
