@@ -21,3 +21,6 @@ func display_attack_up():
 	
 func display_attack_right():
 	animatedSprite.play("right")
+	
+func display_idle():
+	animatedSprite.play("idle")

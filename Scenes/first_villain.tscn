@@ -26,7 +26,7 @@ region = Rect2(64, 160, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_7wbf6"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_jrcwq")
 }],
 "loop": true,
@@ -42,7 +42,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_fqqe0")
 }],
 "loop": true,
@@ -50,7 +50,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_1si7w")
 }],
 "loop": true,
@@ -58,7 +58,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_0vy2f")
 }],
 "loop": true,
@@ -73,5 +73,7 @@ script = ExtResource("1_8b3af")
 position = Vector2(-24, -24)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_7wbf6")
-animation = &"idle"
+animation = &"down"
 autoplay = "idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

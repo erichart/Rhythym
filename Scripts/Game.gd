@@ -54,56 +54,6 @@ func _on_Conductor_beat(position):
 	song_position_in_beats = position
 	if song_position_in_beats > 36:
 		spawn_1_beat = 1
-		spawn_2_beat = 1
-		spawn_3_beat = 1
-		spawn_4_beat = 1
-	if song_position_in_beats > 98:
-		spawn_1_beat = 2
-		spawn_2_beat = 0
-		spawn_3_beat = 1
-		spawn_4_beat = 0
-	if song_position_in_beats > 132:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
-	if song_position_in_beats > 162:
-		spawn_1_beat = 2
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 1
-	if song_position_in_beats > 194:
-		spawn_1_beat = 2
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 228:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 258:
-		spawn_1_beat = 1
-		spawn_2_beat = 2
-		spawn_3_beat = 1
-		spawn_4_beat = 2
-	if song_position_in_beats > 288:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
-	if song_position_in_beats > 322:
-		spawn_1_beat = 3
-		spawn_2_beat = 2
-		spawn_3_beat = 2
-		spawn_4_beat = 1
-	if song_position_in_beats > 388:
-		spawn_1_beat = 1
-		spawn_2_beat = 0
-		spawn_3_beat = 0
-		spawn_4_beat = 0
-	if song_position_in_beats > 396:
-		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
@@ -120,6 +70,7 @@ func _on_Conductor_beat(position):
 
 
 func _spawn_notes(to_spawn):
+	idle_villain()
 	if to_spawn > 0:
 		lane = randi() % 3
 		instance = note.instantiate()
@@ -177,3 +128,6 @@ func draw_attacks(direction):
 		$FirstVillain.display_attack_up()
 	elif direction == 2:
 		$FirstVillain.display_attack_right()
+		
+func idle_villain():
+	$FirstVillain.display_idle()

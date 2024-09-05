@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnqt4gh14jmgo"]
+[gd_scene load_steps=7 format=3 uid="uid://dnqt4gh14jmgo"]
 
 [ext_resource type="SpriteFrames" path="res://Frames/note_frames.tres" id="1"]
 [ext_resource type="Texture2D" uid="uid://bv20w7oj0pli" path="res://Sprites/game/particles/star.png" id="2"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="3"]
 [ext_resource type="Script" path="res://Scripts/Note.gd" id="4"]
+[ext_resource type="AudioStream" uid="uid://dfl88vxwa7v1y" path="res://Sounds/tap.wav" id="5_ho80l"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)
@@ -46,5 +47,10 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NoteNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ho80l")
+volume_db = -1.701
+bus = &"SFX"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

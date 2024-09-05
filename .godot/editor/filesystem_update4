@@ -11,3 +11,5 @@ res://Scripts/Global.gd
 res://Scenes/ArrowButton.tscn
 res://Scenes/End.tscn
 res://Scripts/Game.gd
+res://Scripts/Note.gd
+res://default_bus_layout.tres

@@ -59,6 +59,7 @@ offset_bottom = 98.0
 [node name="Conductor" parent="." instance=ExtResource("8")]
 stream = ExtResource("5")
 volume_db = -15.0
+bus = &"Music"
 bpm = 115
 
 [node name="FirstVillain" parent="." instance=ExtResource("10_hervh")]

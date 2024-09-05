@@ -30,12 +30,15 @@ func initialize(lane):
 	if lane == 0:
 		$AnimatedSprite2D.frame = 0
 		position = LEFT_LANE_SPAWN
+		$NoteNoise.play() #these are not making noise. what about putting a sound on the animation of the character
 	elif lane == 1:
 		$AnimatedSprite2D.frame = 1
 		position = CENTRE_LANE_SPAWN
+		$NoteNoise.play()
 	elif lane == 2:
 		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
+		$NoteNoise.play()
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
@@ -51,6 +54,7 @@ func destroy(score):
 	if score == 3:
 		$Node2D/Label.text = "GREAT"
 		$Node2D/Label.modulate = Color("f6d6bd")
+		$NoteNoise.play() #this is working and I want this
 	elif score == 2:
 		$Node2D/Label.text = "GOOD"
 		$Node2D/Label.modulate = Color("c3a38a")
