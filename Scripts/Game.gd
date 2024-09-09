@@ -68,7 +68,7 @@ func _on_Conductor_beat(position):
 			print ("Error changing scene to End")
 
 
-
+#update this function to either take prewritten songs with determinded note patterns
 func _spawn_notes(to_spawn):
 	idle_villain()
 	if to_spawn > 0:

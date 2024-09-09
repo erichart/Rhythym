@@ -8,3 +8,5 @@ res://Scenes/Note.tscn
 res://Scenes/Conductor.tscn
 res://Scenes/ArrowButton.tscn
 res://Scenes/End.tscn
+res://Scripts/Note.gd
+res://Scripts/Game.gd

@@ -1,6 +1,10 @@
 extends Area2D
 
-const TARGET_Y = 164
+#increase the amount of time before the note must be played
+#doesn't change the tempo
+#I need to figure out how many notes match the corresponding target Y
+#In order to play a full measure, I need a full measure to respond
+const TARGET_Y = 8 #WAS 164, 8 made a big change
 const SPAWN_Y = -16
 const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 
@@ -30,15 +34,12 @@ func initialize(lane):
 	if lane == 0:
 		$AnimatedSprite2D.frame = 0
 		position = LEFT_LANE_SPAWN
-		$NoteNoise.play() #these are not making noise. what about putting a sound on the animation of the character
 	elif lane == 1:
 		$AnimatedSprite2D.frame = 1
 		position = CENTRE_LANE_SPAWN
-		$NoteNoise.play()
 	elif lane == 2:
 		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
-		$NoteNoise.play()
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
