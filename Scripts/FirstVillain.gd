@@ -15,12 +15,15 @@ func _process(delta):
 
 func display_attack_left():
 	animatedSprite.play("left")
+	$TelegraphAttack.play()
 
 func display_attack_up():
 	animatedSprite.play("up")
+	$TelegraphAttack.play()
 	
 func display_attack_right():
 	animatedSprite.play("right")
+	$TelegraphAttack.play()
 	
 func display_idle():
 	animatedSprite.play("idle")

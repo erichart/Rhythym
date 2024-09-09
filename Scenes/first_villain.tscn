@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://kjg8jox7r3rr"]
+[gd_scene load_steps=10 format=3 uid="uid://kjg8jox7r3rr"]
 
 [ext_resource type="Script" path="res://Scripts/FirstVillain.gd" id="1_8b3af"]
 [ext_resource type="Texture2D" uid="uid://qx5aoldkw70o" path="res://Sprites/game/bucky/knight.png" id="1_k5maf"]
+[ext_resource type="AudioStream" uid="uid://cschq6s4lrqpc" path="res://Sounds/jump.wav" id="3_h25wg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrcwq"]
 atlas = ExtResource("1_k5maf")
@@ -76,4 +77,6 @@ sprite_frames = SubResource("SpriteFrames_7wbf6")
 animation = &"down"
 autoplay = "idle"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="TelegraphAttack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h25wg")
+bus = &"SFX"

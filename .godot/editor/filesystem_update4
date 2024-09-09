@@ -1,15 +1,10 @@
 res://default_env.tres
-res://Scenes/Global.tscn
 res://Scenes/Menu.tscn
+res://Scripts/FirstVillain.gd
+res://Scenes/Global.tscn
 res://Scenes/first_villain.tscn
 res://Scenes/Game.tscn
-res://Scripts/FirstVillain.gd
-res://Scripts/ArrowButton.gd
 res://Scenes/Note.tscn
 res://Scenes/Conductor.tscn
-res://Scripts/Global.gd
 res://Scenes/ArrowButton.tscn
 res://Scenes/End.tscn
-res://Scripts/Game.gd
-res://Scripts/Note.gd
-res://default_bus_layout.tres
