@@ -4,7 +4,7 @@ extends Area2D
 #doesn't change the tempo
 #I need to figure out how many notes match the corresponding target Y
 #In order to play a full measure, I need a full measure to respond
-const TARGET_Y = 8 #WAS 164, 8 made a big change
+const TARGET_Y = 164 #WAS 164, 8 made a big change
 const SPAWN_Y = -16
 const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 
